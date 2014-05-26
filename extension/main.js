@@ -15,11 +15,11 @@
 var usedConnections = [];
 
 chrome.app.runtime.onLaunched.addListener(function() {
-  chrome.app.window.create('interface.html', {
+  chrome.app.window.create('interface-jqskin.html', {
     'id': 'radioTuner',
     'bounds': {
-      'width': 500,
-      'height': 225
+      'width': 700,
+      'height': 700
     },
     'resizable': false,
     'frame': 'none'
