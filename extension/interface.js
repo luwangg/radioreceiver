@@ -524,5 +524,7 @@ window.addEventListener('load', function() {
   AuxWindows.resizeCurrentTo(500, 225);
   var interface = new Interface(radio);
   interface.attach();
+
+  // constructSkin(interface); // will defined in interface-jqskin.js
 });
 
