@@ -31,6 +31,10 @@ $(function() {
 		clickable: true,
 		click: (function() {
 			$('#led').switch("value", $(this).switch("value"));
+			if ($(this).switch("value")) 
+				radio.start();
+			else
+				radio.stop();
 		})
 	}).appendTo('#draw');
 	
@@ -38,7 +42,10 @@ $(function() {
 	$('<img />').knob({
 		id: 'knob37', image: 'images/knob_white_big_mid.png',
 		left: 60, top: 300, width: 60, height: 60, value: 40,
-		change: (function() {var v = Math.floor($(this).knob("value") / 51); $('#led04').switch("value", v); })
+		change: (function() {
+			var v = $(this).knob("value") / 100;
+			radio.setVolume(v);
+		})
 	}).appendTo('#draw');
 
 	// Band Switch
