@@ -887,8 +887,10 @@ function Interface(fmRadio) {
 var radio = new RadioController();
 
 window.addEventListener('load', function() {
-  AuxWindows.resizeCurrentTo(500, 225);
+  AuxWindows.resizeCurrentTo(700, 700);
   var interface = new Interface(radio);
   interface.attach();
+
+  // constructSkin(interface); // will defined in interface-jqskin.js
 });
 
