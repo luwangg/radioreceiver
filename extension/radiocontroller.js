@@ -45,7 +45,8 @@ function RadioController() {
   var state = new State(STATE.OFF);
   var requestingBlocks = 0;
   var playingBlocks = 0;
-  var frequency = 88500000;
+//  var frequency = 88500000;
+  var frequency = 78500000;
   var stereo = true;
   var stereoEnabled = true;
   var volume = 1;

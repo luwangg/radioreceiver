@@ -423,6 +423,7 @@ function Interface(fmRadio) {
    */
   function setFrequency(newFreq, bounding) {
     newFreq = freqStep * Math.round(newFreq / freqStep);
+console.log(minFreq + ' ' + maxFreq + ' ' + newFreq + ' ' + bounding);
     if (newFreq >= minFreq && newFreq <= maxFreq) {
       fmRadio.setFrequency(newFreq);
     } else if (bounding && newFreq < minFreq) {
